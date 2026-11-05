@@ -1,0 +1,381 @@
+<!doctype html>
+<!-- Embedded Lucide icons; license follows.
+ISC License
+
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+---
+
+The following Lucide icons are derived from the Feather project:
+
+airplay, alert-circle, alert-octagon, alert-triangle, aperture, arrow-down-circle, arrow-down-left, arrow-down-right, arrow-down, arrow-left-circle, arrow-left, arrow-right-circle, arrow-right, arrow-up-circle, arrow-up-left, arrow-up-right, arrow-up, at-sign, calendar, cast, check, chevron-down, chevron-left, chevron-right, chevron-up, chevrons-down, chevrons-left, chevrons-right, chevrons-up, circle, clipboard, clock, code, columns, command, compass, corner-down-left, corner-down-right, corner-left-down, corner-left-up, corner-right-down, corner-right-up, corner-up-left, corner-up-right, crosshair, database, divide-circle, divide-square, dollar-sign, download, external-link, feather, frown, hash, headphones, help-circle, info, italic, key, layout, life-buoy, link-2, link, loader, lock, log-in, log-out, maximize, meh, minimize, minimize-2, minus-circle, minus-square, minus, monitor, moon, more-horizontal, more-vertical, move, music, navigation-2, navigation, octagon, pause-circle, percent, plus-circle, plus-square, plus, power, radio, rss, search, server, share, shopping-bag, sidebar, smartphone, smile, square, table-2, tablet, target, terminal, trash-2, trash, triangle, tv, type, upload, x-circle, x-octagon, x-square, x, zoom-in, zoom-out
+
+The MIT License (MIT) (for the icons listed above)
+
+Copyright (c) 2013-present Cole Bemis
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+-->
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Пульт VINTEO — демонстрация</title>
+<style>
+:root { color-scheme: light dark; background: light-dark(#fff,#181818); }
+body { margin:0; padding:1rem; background:inherit; }
+.viz-dotted-background { background-image:radial-gradient(light-dark(#0002,#fff3) .7px, transparent .7px); background-size:16px 16px; }
+#remote-study svg { display:block; flex-shrink:0; }
+#remote-study button { cursor:pointer; }
+</style>
+</head>
+<body>
+<style>
+#remote-study { --ui-bg:light-dark(#f4f5f4,#202322); --ui-panel:light-dark(#ffffff,#292d2b); --ui-text:light-dark(#242c28,#e4e9e5); --ui-muted:light-dark(#69746e,#a1ada5); --ui-line:light-dark(#dce2de,#424a44); --ui-accent:light-dark(#336a51,#a5cfb5); --ui-selected:light-dark(#e7efe9,#36483d); color:var(--ui-text); font-family:Arial,Helvetica,sans-serif; }
+#remote-study * { box-sizing:border-box; }
+#remote-study .rs-stage { display:grid; grid-template-columns:240px minmax(0,1fr); align-items:start; gap:22px; padding:32px 22px 30px 10px; }
+#remote-study .rs-object { display:flex; justify-content:center; padding:6px 0 12px; }
+#remote-study .rs-remote { position:relative; width:180px; height:1010px; flex-shrink:0; padding:28px 19px 0; color:#e9e9e6; color-scheme:dark; border:1px solid #121313; border-radius:9px 10px 14px 12px; background:linear-gradient(93deg,#171918 0%,#353736 2%,#292b2a 5%,#2b2d2c 48%,#282a29 91%,#1a1c1b 97%,#080909 100%); box-shadow:inset 1px 0 1px #575957,inset -2px 0 1px #050605; transform:none; }
+#remote-study .rs-remote::before { content:""; position:absolute; inset:8px 5px 10px 5px; background-image:repeating-radial-gradient(circle at 20% 31%,#ffffff08 0 .45px,transparent .6px 3px); background-size:4px 5px; opacity:.36; pointer-events:none; border-radius:7px; }
+#remote-study .rs-remote::after { content:""; position:absolute; bottom:1px; left:2px; right:2px; height:15.5px; border-radius:0 0 11px 10px; background:#0c0e0d; clip-path:polygon(0 42%,13% 42%,24% 0,80% 0,92% 38%,100% 38%,100% 100%,0 100%); pointer-events:none; }
+#remote-study .rs-ir { position:absolute; top:2px; left:7px; right:7px; height:8px; background:linear-gradient(180deg,#171919,#050606 58%,#353734); border-radius:5px 5px 3px 3px; }
+#remote-study .rs-top { display:flex; justify-content:space-between; margin-bottom:16px; }
+#remote-study .rs-key { appearance:none; font-family:Arial,Helvetica,sans-serif; border:0; margin:0; color:inherit; padding:0; display:flex; align-items:center; justify-content:center; background:transparent; position:relative; user-select:none; -webkit-user-select:none; touch-action:manipulation; -webkit-tap-highlight-color:transparent; }
+#remote-study .rs-face { width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px; border-radius:inherit; background:linear-gradient(145deg,#303332 0%,#282b2a 45%,#232524 100%); box-shadow:inset 0 1px 1px #55595470,inset 1px 0 1px #3c403c80,inset 0 -1px 1px #0c0e0c,0 2px 2px #000c; transform:translateY(0); transition:transform 75ms ease-out; }
+#remote-study .rs-key:hover .rs-face { background:linear-gradient(145deg,#373b38,#2b2f2c); }
+#remote-study .rs-key:active .rs-face,#remote-study .rs-key.is-down .rs-face { transform:translateY(var(--rs-depth,1px)) scale(.978); box-shadow:inset 0 2px 3px #080a08b0,inset 0 -1px 0 #55595040; background:linear-gradient(#242725,#292c29); }
+#remote-study .rs-key svg { width:22px; height:22px; stroke-width:2.5; }
+#remote-study .rs-remote .rs-key svg { width:22px!important; height:22px!important; }
+#remote-study .rs-square { width:44px; height:44px; border-radius:7px; background:#111311; box-shadow:0 0 0 1px #111210; }
+#remote-study .rs-square svg { width:25px; height:25px; }
+#remote-study .rs-remote .rs-square svg { width:25px!important; height:25px!important; }
+#remote-study .rs-eject .rs-face { gap:2px; }
+#remote-study .rs-eject svg { width:21px; height:17px; fill:currentColor; stroke-width:1.5; }
+#remote-study .rs-remote .rs-eject svg { width:21px!important; height:17px!important; }
+#remote-study .rs-eject-bar { width:20px; height:3px; border-radius:1px; background:currentColor; }
+#remote-study .rs-rockers { display:flex; justify-content:space-between; margin-bottom:18px; }
+#remote-study .rs-rocker { width:44px; border-radius:7px; overflow:visible; background:#121412; box-shadow:0 0 0 1px #101210,0 2px 1px #070807; }
+#remote-study .rs-rocker .rs-key { width:44px; height:44px; }
+#remote-study .rs-rocker .rs-key:first-child { border-radius:7px 7px 2px 2px; }
+#remote-study .rs-rocker .rs-key:last-child { border-radius:2px 2px 7px 7px; }
+#remote-study .rs-volume .rs-face { flex-direction:row; gap:0; }
+#remote-study .rs-volume svg { width:28px; height:28px; fill:#e8eae6; stroke-width:1.2; margin-right:-9px; flex-shrink:0; }
+#remote-study .rs-remote .rs-volume svg { width:28px!important; height:28px!important; margin-right:-9px!important; }
+#remote-study .rs-volume b { font-size:19px; font-weight:700; width:13px; line-height:1; }
+#remote-study .rs-pad { position:relative; display:grid; grid-template:repeat(3,46px)/repeat(3,46px); width:138px; height:138px; margin-bottom:18px; border-radius:21px; background:linear-gradient(135deg,#30332f,#242725 70%); box-shadow:0 0 0 1.5px #11130f,inset 1px 1px 1px #62645b50,0 2px 1px #10110e; }
+#remote-study .rs-pad .rs-face { box-shadow:none; background:transparent; }
+#remote-study .rs-pad .rs-key:active .rs-face,#remote-study .rs-pad .rs-key.is-down .rs-face { background:#15181460; }
+#remote-study .rs-pad .rs-key { border-radius:8px; }
+#remote-study .rs-pad .rs-up { grid-area:1/2; }
+#remote-study .rs-pad .rs-left { grid-area:2/1; }
+#remote-study .rs-pad .rs-ok { grid-area:2/2; border-radius:3px; padding:2px; }
+#remote-study .rs-pad .rs-ok .rs-face { background:linear-gradient(130deg,#2c2f2c,#202320); box-shadow:0 0 0 1px #11130f,0 1px 1px #090a08,inset 0 1px 1px #4b4e4240; }
+#remote-study .rs-ok-dot { width:17px; height:17px; border-radius:50%; background:#f2f3eb; box-shadow:inset 0 0 1px #b8bdb3; }
+#remote-study .rs-pad .rs-right { grid-area:2/3; }
+#remote-study .rs-pad .rs-down { grid-area:3/2; }
+#remote-study .rs-pad svg { stroke-width:4; width:24px; height:24px; }
+#remote-study .rs-remote .rs-pad svg { width:24px!important; height:24px!important; }
+#remote-study .rs-bank { display:grid; grid-template-columns:repeat(3,1fr); border:1px solid #0c0f0c; border-radius:8px; background:#171a16; box-shadow:0 1px 1px #55584935,0 2px 1px #080a07; }
+#remote-study .rs-functions { margin-bottom:19px; }
+#remote-study .rs-bank .rs-key { min-width:0; height:44px; border-bottom:1px solid #10120e; }
+#remote-study .rs-bank .rs-key:nth-child(-n+3) { border-top:0; }
+#remote-study .rs-bank .rs-key:nth-last-child(-n+3) { border-bottom:0; }
+#remote-study .rs-bank .rs-key:first-child { border-radius:7px 0 0 0; }
+#remote-study .rs-bank .rs-key:nth-child(3) { border-radius:0 7px 0 0; }
+#remote-study .rs-bank .rs-key:nth-last-child(3) { border-radius:0 0 0 7px; }
+#remote-study .rs-bank .rs-key:last-child { border-radius:0 0 7px 0; }
+#remote-study .rs-bank .rs-face { box-shadow:inset 0 1px 0 #474b402b; gap:1px; }
+#remote-study .rs-functions svg { width:20px; height:18px; }
+#remote-study .rs-remote .rs-functions svg { width:20px!important; height:18px!important; }
+#remote-study .rs-label { font-size:10px; font-weight:700; line-height:1; letter-spacing:-.5px; text-shadow:0 1px 1px #050605; white-space:nowrap; transform:scaleX(.87); }
+#remote-study .rs-label.rs-double { font-size:10px; letter-spacing:-.65px; line-height:.95; }
+#remote-study .rs-call { color:#24b068; }
+#remote-study .rs-hangup { color:#e64236; }
+#remote-study .rs-functions .rs-call svg,#remote-study .rs-functions .rs-hangup svg { width:26px; height:26px; fill:currentColor; stroke-width:1.8; }
+#remote-study .rs-remote .rs-functions .rs-call svg,#remote-study .rs-remote .rs-functions .rs-hangup svg { width:26px!important; height:26px!important; }
+#remote-study .rs-hangup svg { transform:rotate(135deg); }
+#remote-study .rs-program svg { color:#ede052; fill:#ede052; stroke-width:1; }
+#remote-study .rs-numpad .rs-face { gap:1px; }
+#remote-study .rs-digit { font-size:20px; font-weight:700; line-height:1.05; text-shadow:0 1px 1px #050605; }
+#remote-study .rs-letters { min-height:11px; font-size:11px; line-height:1; font-weight:700; letter-spacing:-.4px; }
+#remote-study .rs-numpad { margin-bottom:24px; }
+/* Concentric circular corners: centers (11.5,11.5), (58.5,11.5), (35,51.5).
+   The face is the same contour inset by 1.5px, not a scaled copy.
+   Its local coordinates subtract the button's 1.5px padding. */
+#remote-study .rs-mute { width:70px; height:63px; margin:0 auto; clip-path:path('M 11.5 0 H 58.5 A 11.5 11.5 0 0 1 68.415428 17.325314 L 44.915428 57.325314 A 11.5 11.5 0 0 1 25.084572 57.325314 L 1.584572 17.325314 A 11.5 11.5 0 0 1 11.5 0 Z'); background:#070a07; padding:1.5px; border-radius:0; }
+#remote-study .rs-mute .rs-face { clip-path:path('M 10 0 H 57 A 10 10 0 0 1 65.622111 15.065490 L 42.122111 55.065490 A 10 10 0 0 1 24.877889 55.065490 L 1.377889 15.065490 A 10 10 0 0 1 10 0 Z'); padding-bottom:12px; box-shadow:none; }
+#remote-study .rs-mute:active .rs-face,#remote-study .rs-mute.is-down .rs-face { transform:translateY(var(--rs-depth,1px)); box-shadow:none; }
+#remote-study .rs-mute svg { width:29px; height:29px; color:#e84634; stroke-width:2.2; }
+#remote-study .rs-remote .rs-mute svg { width:29px!important; height:29px!important; }
+#remote-study .rs-mute-wrap { border-radius:12px; width:70px; margin:0 auto; }
+#remote-study .rs-mute-wrap:has(.rs-mute:focus-visible) { outline:2px solid #b9d8f5; outline-offset:3px; }
+#remote-study .rs-mute[aria-pressed=true] .rs-face { background:linear-gradient(140deg,#3d302b,#2b2822); }
+#remote-study .rs-side { padding-top:52px; min-width:0; }
+#remote-study .rs-eyebrow { display:flex; align-items:center; justify-content:space-between; gap:12px; margin:0 0 14px; font-size:12px; font-weight:500; letter-spacing:.02em; color:var(--ui-muted); }
+#remote-study .rs-demo { font-size:11px; border:1px solid var(--ui-line); border-radius:4px; padding:3px 6px; }
+#remote-study .rs-screen { overflow:hidden; border:1px solid var(--ui-line); border-radius:14px; background:var(--ui-bg); box-shadow:0 3px 10px #00000008; }
+#remote-study .rs-screen-head { display:flex; justify-content:space-between; flex-wrap:wrap; align-items:center; gap:8px; padding:17px 18px; border-bottom:1px solid var(--ui-line); font-size:12px; }
+#remote-study .rs-online { display:flex; align-items:center; gap:6px; color:var(--ui-muted); font-size:11px; }
+#remote-study .rs-led { width:6px; height:6px; background:var(--ui-accent); border-radius:50%; }
+#remote-study .rs-display { min-height:277px; padding:22px 18px 18px; }
+#remote-study .rs-view-title { font-size:21px; font-weight:500; line-height:1.2; margin:0 0 18px; }
+#remote-study .rs-menu { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; }
+#remote-study .rs-tile { min-width:0; min-height:80px; padding:13px 11px; border:1px solid var(--ui-line); border-radius:8px; background:var(--ui-panel); font-size:12px; display:flex; flex-direction:column; gap:10px; }
+#remote-study .rs-tile svg { width:18px; height:18px; color:var(--ui-muted); }
+#remote-study .rs-tile.is-selected { background:var(--ui-selected); border-color:var(--ui-accent); box-shadow:0 0 0 1px var(--ui-accent); }
+#remote-study .rs-tile.is-selected svg { color:var(--ui-accent); }
+#remote-study .rs-device-status { display:flex; gap:8px 16px; flex-wrap:wrap; padding:13px 18px; border-top:1px solid var(--ui-line); font-size:11px; color:var(--ui-muted); }
+#remote-study .rs-status-item { display:flex; align-items:center; gap:6px; }
+#remote-study .rs-status-item svg { width:14px; height:14px; }
+#remote-study .rs-feedback { margin-top:24px; padding-left:12px; border-left:2px solid var(--ui-line); min-height:74px; }
+#remote-study .rs-feedback-label { font-size:11px; color:var(--ui-muted); margin-bottom:7px; }
+#remote-study .rs-feedback-action { font-size:15px; line-height:1.4; }
+#remote-study .rs-feedback-detail { margin-top:5px; font-size:12px; line-height:1.5; color:var(--ui-muted); }
+#remote-study .rs-keyhint { font-size:11px; color:var(--ui-muted); line-height:1.6; margin-top:26px; }
+#remote-study .rs-keyhint kbd { color:var(--ui-text); background:var(--ui-panel); padding:2px 5px; border:1px solid var(--ui-line); border-radius:4px; font:11px Arial,sans-serif; }
+#remote-study .rs-dial { min-height:51px; font-size:25px; letter-spacing:2px; overflow-wrap:anywhere; margin:24px 0 8px; }
+#remote-study .rs-subtitle { font-size:12px; line-height:1.5; color:var(--ui-muted); }
+#remote-study .rs-camera { display:grid; place-content:center; height:152px; border-radius:8px; position:relative; overflow:hidden; background:repeating-linear-gradient(0deg,transparent 0 26px,var(--ui-line) 26px 27px),repeating-linear-gradient(90deg,var(--ui-panel) 0 26px,var(--ui-line) 26px 27px); }
+#remote-study .rs-camera-subject { display:flex; align-items:center; justify-content:center; border:1px solid var(--ui-line); width:66px; height:66px; border-radius:50%; background:var(--ui-bg); transform:scale(var(--rs-zoom,1)); transition:transform 120ms ease-out; }
+#remote-study .rs-camera-subject svg { width:30px; height:30px; color:var(--ui-muted); }
+#remote-study .rs-view[hidden] { display:none; }
+#remote-study .rs-list { display:grid; gap:7px; }
+#remote-study .rs-list-item { padding:11px 12px; background:var(--ui-panel); border:1px solid var(--ui-line); border-radius:7px; font-size:12px; }
+#remote-study .rs-list-item.is-selected { background:var(--ui-selected); border-color:var(--ui-accent); }
+#remote-study .rs-meter { height:5px; border-radius:4px; background:var(--ui-line); margin:22px 0 12px; overflow:hidden; }
+#remote-study .rs-meter-fill { height:100%; width:50%; background:var(--ui-accent); }
+#remote-study .rs-call-state { display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; min-height:184px; font-size:16px; text-align:center; }
+#remote-study .rs-call-state svg { width:30px; height:30px; color:var(--ui-accent); }
+#remote-study .rs-off { opacity:.6; }
+@media (max-width:620px) { #remote-study .rs-stage { grid-template-columns:210px minmax(0,1fr); padding-left:0; padding-right:0; gap:8px; } #remote-study .rs-screen-head { padding:14px 12px; } #remote-study .rs-display { padding:16px 12px; } #remote-study .rs-tile { padding:10px 8px; } #remote-study .rs-device-status { padding:12px; } }
+@media (max-width:500px) { #remote-study .rs-stage { display:flex; flex-direction:column; align-items:stretch; padding-top:16px; gap:24px; } #remote-study .rs-side { order:-1; padding:0 8px; } #remote-study .rs-display { min-height:232px; } #remote-study .rs-menu { grid-template-columns:repeat(2,minmax(0,1fr)); } #remote-study .rs-tile { font-size:12px; min-height:70px; padding:11px; } #remote-study .rs-view-title { font-size:19px; margin-bottom:14px; } #remote-study .rs-feedback { margin-top:16px; min-height:0; } #remote-study .rs-keyhint { margin-top:14px; } #remote-study .rs-object { padding:14px 0 20px; } }
+@media (prefers-reduced-motion:reduce) { #remote-study .rs-face,#remote-study .rs-camera-subject { transition:none; } }
+</style>
+<div id="remote-study" lang="ru">
+  <div class="rs-stage viz-dotted-background">
+    <div class="rs-object">
+      <div class="rs-remote" aria-label="Интерактивная модель пульта по фотографии">
+        <div class="rs-ir" aria-hidden="true"></div>
+        <div class="rs-top">
+          <button type="button" class="rs-key rs-square cursor-interaction" data-command="power" aria-label="Питание" data-tooltip="Питание"><span class="rs-face"><svg class="lucide lucide-power" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"></path><path d="M18.4 6.6a9 9 0 1 1-12.77.04"></path></svg></span></button>
+          <button type="button" class="rs-key rs-square rs-eject cursor-interaction" data-command="top-right" aria-label="Верхняя правая кнопка" data-tooltip="Верхняя правая кнопка"><span class="rs-face"><svg class="lucide lucide-triangle" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.73 4a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"></path></svg><span class="rs-eject-bar" aria-hidden="true"></span></span></button>
+        </div>
+        <div class="rs-rockers">
+          <div class="rs-rocker">
+            <button type="button" class="rs-key rs-volume cursor-interaction" data-command="volume-up" aria-label="Громкость плюс" data-tooltip="Громкость +"><span class="rs-face"><svg class="lucide lucide-volume" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path></svg><b aria-hidden="true">+</b></span></button>
+            <button type="button" class="rs-key rs-volume cursor-interaction" data-command="volume-down" aria-label="Громкость минус" data-tooltip="Громкость −"><span class="rs-face"><svg class="lucide lucide-volume" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path></svg><b aria-hidden="true">−</b></span></button>
+          </div>
+          <div class="rs-rocker">
+            <button type="button" class="rs-key cursor-interaction" data-command="zoom-in" aria-label="Приблизить" data-tooltip="Приблизить"><span class="rs-face"><svg class="lucide lucide-zoom-in" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line><line x1="11" x2="11" y1="8" y2="14"></line><line x1="8" x2="14" y1="11" y2="11"></line></svg></span></button>
+            <button type="button" class="rs-key cursor-interaction" data-command="zoom-out" aria-label="Отдалить" data-tooltip="Отдалить"><span class="rs-face"><svg class="lucide lucide-zoom-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line><line x1="8" x2="14" y1="11" y2="11"></line></svg></span></button>
+          </div>
+        </div>
+        <div class="rs-pad" role="group" aria-label="Навигация">
+          <button type="button" class="rs-key rs-up cursor-interaction" data-command="up" aria-label="Вверх" data-tooltip="Вверх"><span class="rs-face"><svg class="lucide lucide-chevron-up" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"></path></svg></span></button>
+          <button type="button" class="rs-key rs-left cursor-interaction" data-command="left" aria-label="Влево" data-tooltip="Влево"><span class="rs-face"><svg class="lucide lucide-chevron-left" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"></path></svg></span></button>
+          <button type="button" class="rs-key rs-ok cursor-interaction" data-command="ok" aria-label="OK" data-tooltip="OK"><span class="rs-face"><span class="rs-ok-dot" aria-hidden="true"></span></span></button>
+          <button type="button" class="rs-key rs-right cursor-interaction" data-command="right" aria-label="Вправо" data-tooltip="Вправо"><span class="rs-face"><svg class="lucide lucide-chevron-right" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></span></button>
+          <button type="button" class="rs-key rs-down cursor-interaction" data-command="down" aria-label="Вниз" data-tooltip="Вниз"><span class="rs-face"><svg class="lucide lucide-chevron-down" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg></span></button>
+        </div>
+        <div class="rs-bank rs-functions" role="group" aria-label="Функциональные кнопки">
+          <button type="button" class="rs-key cursor-interaction" data-command="home" aria-label="Домой / M1" data-tooltip="Домой · M1"><span class="rs-face"><svg class="lucide lucide-house" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path><path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg><span class="rs-label">M1</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="return" aria-label="Возврат / M2" data-tooltip="Возврат · M2"><span class="rs-face"><svg class="lucide lucide-undo-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11"></path></svg><span class="rs-label">M2</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="menu" aria-label="Меню / M3" data-tooltip="Меню · M3"><span class="rs-face"><svg class="lucide lucide-square-menu" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M7 8h10"></path><path d="M7 12h10"></path><path d="M7 16h10"></path></svg><span class="rs-label">M3</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="selfview" aria-label="Selfview" data-tooltip="SELFVIEW"><span class="rs-face"><svg class="lucide lucide-picture-in-picture-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 9V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10c0 1.1.9 2 2 2h4"></path><rect width="10" height="7" x="12" y="13" rx="2"></rect></svg><span class="rs-label">SELFVIEW</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="mcu-layout" aria-label="MCU layout" data-tooltip="MCU LAYOUT"><span class="rs-face"><svg class="lucide lucide-panels-top-left" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg><span class="rs-label rs-double">MCU<br>LAYOUT</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="screen-layout" aria-label="Screen layout" data-tooltip="SCREEN LAYOUT"><span class="rs-face"><svg class="lucide lucide-panels-left-bottom" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="3" rx="2"></rect><path d="M9 3v18"></path><path d="M9 15h12"></path></svg><span class="rs-label rs-double">SCREEN<br>LAYOUT</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="pc" aria-label="PC" data-tooltip="PC"><span class="rs-face"><svg class="lucide lucide-monitor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg><span class="rs-label">PC</span></span></button>
+          <button type="button" class="rs-key rs-program cursor-interaction" data-command="program" aria-label="Program" data-tooltip="PROGRAM"><span class="rs-face"><svg class="lucide lucide-star" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"></path></svg><span class="rs-label">PROGRAM</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="video-input" aria-label="Video input" data-tooltip="VIDEO INPUT"><span class="rs-face"><svg class="lucide lucide-rectangle-horizontal" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="12" x="2" y="6" rx="2"></rect></svg><span class="rs-label rs-double">VIDEO<br>INPUT</span></span></button>
+          <button type="button" class="rs-key rs-call cursor-interaction" data-command="call" aria-label="Вызов" data-tooltip="Вызов"><span class="rs-face"><svg class="lucide lucide-phone" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="back" aria-label="Стрелка назад" data-tooltip="Стрелка назад"><span class="rs-face"><svg class="lucide lucide-arrow-left" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg></span></button>
+          <button type="button" class="rs-key rs-hangup cursor-interaction" data-command="hangup" aria-label="Завершить вызов" data-tooltip="Завершить вызов"><span class="rs-face"><svg class="lucide lucide-phone" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg></span></button>
+        </div>
+        <div class="rs-bank rs-numpad" role="group" aria-label="Номерная клавиатура">
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-1" aria-label="1"><span class="rs-face"><span class="rs-digit">1</span><span class="rs-letters"></span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-2" aria-label="2, ABC"><span class="rs-face"><span class="rs-digit">2</span><span class="rs-letters">ABC</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-3" aria-label="3, DEF"><span class="rs-face"><span class="rs-digit">3</span><span class="rs-letters">DEF</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-4" aria-label="4, GHI"><span class="rs-face"><span class="rs-digit">4</span><span class="rs-letters">GHI</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-5" aria-label="5, JKL"><span class="rs-face"><span class="rs-digit">5</span><span class="rs-letters">JKL</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-6" aria-label="6, MNO"><span class="rs-face"><span class="rs-digit">6</span><span class="rs-letters">MNO</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-7" aria-label="7, PQRS"><span class="rs-face"><span class="rs-digit">7</span><span class="rs-letters">PQRS</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-8" aria-label="8, TUV"><span class="rs-face"><span class="rs-digit">8</span><span class="rs-letters">TUV</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-9" aria-label="9, WXYZ"><span class="rs-face"><span class="rs-digit">9</span><span class="rs-letters">WXYZ</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-*" aria-label="Звёздочка"><span class="rs-face"><span class="rs-digit">*</span><span class="rs-letters">•</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-0" aria-label="0"><span class="rs-face"><span class="rs-digit">0</span><span class="rs-letters">⎵</span></span></button>
+          <button type="button" class="rs-key cursor-interaction" data-command="digit-#" aria-label="Решётка"><span class="rs-face"><span class="rs-digit">#</span><span class="rs-letters">@</span></span></button>
+        </div>
+        <div class="rs-mute-wrap"><button type="button" class="rs-key rs-mute cursor-interaction" data-command="mute" aria-label="Отключить микрофон" aria-pressed="false" data-tooltip="Микрофон"><span class="rs-face"><svg class="lucide lucide-mic-off" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19v3"></path><path d="M15 9.34V5a3 3 0 0 0-5.68-1.33"></path><path d="M16.95 16.95A7 7 0 0 1 5 12v-2"></path><path d="M18.89 13.23A7 7 0 0 0 19 12v-2"></path><path d="m2 2 20 20"></path><path d="M9 9v3a3 3 0 0 0 5.12 2.12"></path></svg></span></button></div>
+      </div>
+    </div>
+    <div class="rs-side">
+      <div class="rs-eyebrow"><span>Отклик терминала</span><span class="rs-demo">ДЕМО</span></div>
+      <div class="rs-screen">
+        <div class="rs-screen-head"><span>Видеотерминал</span><span class="rs-online"><span class="rs-led"></span><span data-output="power">Включён</span></span></div>
+        <div class="rs-display">
+          <div class="rs-view" data-view="home"><div class="rs-view-title">Главное меню</div><div class="rs-menu">
+            <div class="rs-tile is-selected" data-menu="0"><svg class="lucide lucide-phone" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span>Вызов</span></div>
+            <div class="rs-tile" data-menu="1"><svg class="lucide lucide-video" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg><span>Камера</span></div>
+            <div class="rs-tile" data-menu="2"><svg class="lucide lucide-monitor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"></rect><line x1="8" x2="16" y1="21" y2="21"></line><line x1="12" x2="12" y1="17" y2="21"></line></svg><span>Источники</span></div>
+            <div class="rs-tile" data-menu="3"><svg class="lucide lucide-settings-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 17H5"></path><path d="M19 7h-9"></path><circle cx="17" cy="17" r="3"></circle><circle cx="7" cy="7" r="3"></circle></svg><span>Звук</span></div>
+          </div></div>
+          <div class="rs-view" data-view="dial" hidden><div class="rs-view-title">Набор номера</div><div class="rs-dial" data-output="number">—</div><div class="rs-subtitle">Цифры на пульте · зелёная трубка для вызова</div></div>
+          <div class="rs-view" data-view="camera" hidden><div class="rs-view-title">Камера</div><div class="rs-camera"><div class="rs-camera-subject"><svg class="lucide lucide-video" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"></path><rect x="2" y="6" width="14" height="12" rx="2"></rect></svg></div></div><div class="rs-subtitle" style="margin-top:10px" data-output="camera">Масштаб 1.0× · предпросмотр</div></div>
+          <div class="rs-view" data-view="source" hidden><div class="rs-view-title">Источники</div><div class="rs-list"><div class="rs-list-item is-selected" data-source="0">Камера</div><div class="rs-list-item" data-source="1">HDMI 1</div><div class="rs-list-item" data-source="2">HDMI 2</div></div></div>
+          <div class="rs-view" data-view="sound" hidden><div class="rs-view-title">Звук</div><div class="rs-subtitle">Громкость динамика</div><div class="rs-meter"><div class="rs-meter-fill"></div></div><div data-output="volume-large">50%</div><div class="rs-subtitle" style="margin-top:20px" data-output="mic-large">Микрофон включён</div></div>
+          <div class="rs-view" data-view="call" hidden><div class="rs-call-state"><svg class="lucide lucide-phone" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path></svg><span>Демонстрация вызова</span><span class="rs-subtitle" data-output="call-number"></span></div></div>
+          <div class="rs-view" data-view="off" hidden><div class="rs-call-state rs-off"><svg class="lucide lucide-power" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v10"></path><path d="M18.4 6.6a9 9 0 1 1-12.77.04"></path></svg><span>Режим ожидания</span></div></div>
+        </div>
+        <div class="rs-device-status"><span class="rs-status-item"><svg class="lucide lucide-volume-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"></path><path d="M16 9a5 5 0 0 1 0 6"></path><path d="M19.364 18.364a9 9 0 0 0 0-12.728"></path></svg><span data-output="volume">50%</span></span><span class="rs-status-item"><svg class="lucide lucide-mic" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19v3"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><rect x="9" y="2" width="6" height="13" rx="3"></rect></svg><span data-output="mic">Микрофон вкл.</span></span></div>
+      </div>
+      <div class="rs-feedback" aria-live="polite" aria-atomic="true"><div class="rs-feedback-label">ДЕЙСТВИЕ ПУЛЬТА</div><div class="rs-feedback-action" data-output="action">Нажмите любую кнопку</div><div class="rs-feedback-detail" data-output="detail">Кнопка утопится, здесь появится отклик.</div></div>
+      <div class="rs-keyhint"><kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> и <kbd>Enter</kbd> — навигация<br><kbd>Esc</kbd> — назад · <kbd>M</kbd> — микрофон</div>
+    </div>
+  </div>
+</div>
+<script>
+(() => {
+  const root = document.getElementById('remote-study');
+  const remote = root.querySelector('.rs-remote');
+  const outputs = Object.fromEntries([...root.querySelectorAll('[data-output]')].map(el => [el.dataset.output, el]));
+  const buttons = new Map([...remote.querySelectorAll('[data-command]')].map(el => [el.dataset.command, el]));
+  const menuNames = ['Вызов','Камера','Источники','Звук'];
+  const menuViews = ['dial','camera','source','sound'];
+  const sourceNames = ['Камера','HDMI 1','HDMI 2'];
+  const defaults = { power:true, volume:50, zoom:1, muted:false, selected:0, source:0, view:'home', number:'', selfview:false, action:'Нажмите любую кнопку', detail:'Кнопка утопится, здесь появится отклик.' };
+  let state = {...defaults};
+  function restore(snapshot) {
+    const s = snapshot?.privateContent;
+    if (!s || s.version !== 1) return;
+    for (const key of ['power','muted','selfview']) if (typeof s[key] === 'boolean') state[key] = s[key];
+    for (const [key,min,max] of [['volume',0,100],['zoom',1,3],['selected',0,3],['source',0,2]]) if (Number.isFinite(s[key])) state[key] = Math.min(max,Math.max(min,s[key]));
+    state.selected = Math.round(state.selected); state.source = Math.round(state.source);
+    if (['home','dial','camera','source','sound','call'].includes(s.view)) state.view = s.view;
+    if (typeof s.number === 'string') state.number = s.number.replace(/[^0-9*#]/g,'').slice(0,24);
+  }
+  try { restore(JSON.parse(localStorage.getItem('vinteo-remote-demo') || 'null')); } catch (_) {}
+  function persist() { try { localStorage.setItem('vinteo-remote-demo', JSON.stringify({privateContent:{...state,version:1}})); } catch (_) {} }
+  function render() {
+    const view = state.power ? state.view : 'off';
+    root.querySelectorAll('[data-view]').forEach(el => { el.hidden = el.dataset.view !== view; });
+    root.querySelectorAll('[data-menu]').forEach(el => el.classList.toggle('is-selected', Number(el.dataset.menu) === state.selected));
+    root.querySelectorAll('[data-source]').forEach(el => el.classList.toggle('is-selected', Number(el.dataset.source) === state.source));
+    outputs.power.textContent = state.power ? 'Включён' : 'Ожидание';
+    outputs.volume.textContent = `${state.volume}%`;
+    outputs['volume-large'].textContent = `${state.volume}%`;
+    outputs.mic.textContent = state.muted ? 'Микрофон выкл.' : 'Микрофон вкл.';
+    outputs['mic-large'].textContent = state.muted ? 'Микрофон выключен' : 'Микрофон включён';
+    outputs.number.textContent = state.number || '—';
+    outputs['call-number'].textContent = state.number;
+    outputs.camera.textContent = `Масштаб ${state.zoom.toFixed(1)}× · ${state.selfview ? 'SELFVIEW' : 'предпросмотр'}`;
+    outputs.action.textContent = state.action;
+    outputs.detail.textContent = state.detail;
+    root.querySelector('.rs-meter-fill').style.width = `${state.volume}%`;
+    root.querySelector('.rs-camera-subject').style.setProperty('--rs-zoom', String(state.zoom));
+    buttons.get('mute').setAttribute('aria-pressed', String(state.muted));
+    buttons.get('mute').setAttribute('aria-label', state.muted ? 'Включить микрофон' : 'Отключить микрофон');
+  }
+  function action(command) {
+    let name = '', detail = '';
+    if (command === 'power') {
+      state.power = !state.power; state.view = 'home'; name = 'Питание'; detail = state.power ? 'Терминал включён.' : 'Терминал в режиме ожидания.';
+    } else if (!state.power) {
+      name = 'Режим ожидания'; detail = 'Нажмите кнопку питания на пульте.';
+    } else if (command.startsWith('digit-')) {
+      state.view = 'dial';
+      if (state.number.length < 24) { state.number += command.slice(6); name = `Клавиша ${command.slice(6)}`; detail = 'Символ добавлен в номер.'; }
+      else { name = 'Номер заполнен'; detail = 'Стрелка назад удаляет последний символ.'; }
+    } else if (command === 'volume-up' || command === 'volume-down') {
+      state.volume = Math.max(0, Math.min(100, state.volume + (command === 'volume-up' ? 5 : -5))); name = `Громкость ${state.volume}%`; detail = command === 'volume-up' ? 'Громкость увеличена.' : 'Громкость уменьшена.';
+    } else if (command === 'zoom-in' || command === 'zoom-out') {
+      state.zoom = Math.round(Math.max(1, Math.min(3, state.zoom + (command === 'zoom-in' ? .2 : -.2))) * 10) / 10; state.view = 'camera'; name = `Масштаб ${state.zoom.toFixed(1)}×`; detail = 'Изменён масштаб демонстрационного кадра.';
+    } else if (['up','down','left','right'].includes(command)) {
+      if (state.view === 'home') { const c = state.selected % 2, r = Math.floor(state.selected / 2); state.selected = command === 'up' ? c : command === 'down' ? 2+c : command === 'left' ? r*2 : r*2+1; name = menuNames[state.selected]; detail = 'Пункт выделен. Центральная кнопка — открыть.'; }
+      else if (state.view === 'source') { state.source = Math.max(0,Math.min(2,state.source + (['up','left'].includes(command) ? -1 : 1))); name = sourceNames[state.source]; detail = 'Источник выделен. Центральная кнопка — выбрать.'; }
+      else { name = {up:'Вверх',down:'Вниз',left:'Влево',right:'Вправо'}[command]; detail = 'Команда навигации зарегистрирована.'; }
+    } else if (command === 'ok') {
+      if (state.view === 'home') { state.view = menuViews[state.selected]; name = menuNames[state.selected]; detail = 'Раздел открыт.'; }
+      else if (state.view === 'source') { name = sourceNames[state.source]; detail = 'Источник выбран в демо.'; }
+      else { name = 'OK'; detail = 'Нажатие центральной кнопки зарегистрировано.'; }
+    } else if (command === 'home' || command === 'menu' || command === 'return') {
+      state.view = 'home'; name = {home:'Домой · M1',menu:'Меню · M3',return:'Возврат · M2'}[command]; detail = 'Главное меню. Назначение в прототипе.';
+    } else if (command === 'back') {
+      if (state.view === 'dial' && state.number) { state.number = state.number.slice(0,-1); name = 'Стрелка назад'; detail = 'Последний символ удалён.'; }
+      else { state.view = 'home'; name = 'Стрелка назад'; detail = 'Возврат в главное меню.'; }
+    } else if (command === 'mute') {
+      state.muted = !state.muted; name = state.muted ? 'Микрофон выключен' : 'Микрофон включён'; detail = 'Состояние изменено в демонстрации.';
+    } else if (command === 'call') {
+      if (state.number) { state.view = 'call'; name = 'Вызов'; detail = 'Показан демовызов. Реальное соединение не создаётся.'; }
+      else { state.view = 'dial'; name = 'Вызов'; detail = 'Введите номер цифровыми кнопками пульта.'; }
+    } else if (command === 'hangup') {
+      const wasCalling = state.view === 'call'; state.view = 'home'; name = 'Завершение вызова'; detail = wasCalling ? 'Демовызов завершён.' : 'Активного демовызова нет.';
+    } else if (command === 'selfview') {
+      state.selfview = !state.selfview; state.view = state.selfview ? 'camera' : 'home'; name = 'SELFVIEW'; detail = state.selfview ? 'Собственное изображение открыто в демо.' : 'Собственное изображение скрыто.';
+    } else if (command === 'video-input') {
+      state.view = 'source'; name = 'VIDEO INPUT'; detail = 'Открыт демонстрационный выбор источника.';
+    } else {
+      name = {'top-right':'Верхняя правая кнопка','mcu-layout':'MCU LAYOUT','screen-layout':'SCREEN LAYOUT',pc:'PC',program:'PROGRAM'}[command] || command;
+      detail = 'Нажатие зарегистрировано. Назначение уточним по терминалу.';
+    }
+    state.action = name; state.detail = detail;
+    render(); persist();
+    root.dispatchEvent(new CustomEvent('remote-command', {bubbles:true,detail:{command,source:'demo',state:{power:state.power,volume:state.volume,muted:state.muted}}}));
+  }
+  const flashTimers = new Map();
+  function release(button) { if (button) button.classList.remove('is-down'); }
+  function flash(button) { clearTimeout(flashTimers.get(button)); button.classList.add('is-down'); flashTimers.set(button,setTimeout(() => {release(button);flashTimers.delete(button);},130)); }
+  for (const [command,button] of buttons) {
+    button.addEventListener('pointerdown', event => { if (event.button !== 0) return; clearTimeout(flashTimers.get(button)); button.classList.add('is-down'); });
+    for (const eventName of ['pointerup','pointercancel','pointerleave','lostpointercapture']) button.addEventListener(eventName, () => release(button));
+    button.addEventListener('click', () => { flash(button); action(command); });
+    button.addEventListener('keydown', event => { if (event.key === ' ' || event.key === 'Enter') { if (event.repeat && !['up','down','left','right','volume-up','volume-down','zoom-in','zoom-out','back'].includes(command)) {event.preventDefault();return;} button.classList.add('is-down'); } });
+    button.addEventListener('keyup', () => release(button));
+    button.addEventListener('blur', () => release(button));
+  }
+  const keyCommands = {ArrowUp:'up',ArrowDown:'down',ArrowLeft:'left',ArrowRight:'right',Enter:'ok',Escape:'return',Backspace:'back',m:'mute',M:'mute','+':'volume-up','-':'volume-down'};
+  root.addEventListener('keydown', event => {
+    if (event.ctrlKey || event.metaKey || event.altKey || event.target.closest('input,textarea,select,[contenteditable=true]')) return;
+    if ((event.key === 'Enter' || event.key === ' ') && event.target.closest('button')) return;
+    const command = /^[0-9*#]$/.test(event.key) ? `digit-${event.key}` : keyCommands[event.key];
+    if (!command) return;
+    event.preventDefault();
+    if (event.repeat && !['up','down','left','right','volume-up','volume-down','zoom-in','zoom-out','back'].includes(command)) return;
+    flash(buttons.get(command)); action(command);
+    if (['up','down','left','right'].includes(command)) buttons.get('ok').focus({preventScroll:true});
+  });
+  window.addEventListener('blur', () => { for (const button of buttons.values()) release(button); });
+  render();
+})();
+</script>
+
+</body>
+</html>
